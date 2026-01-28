@@ -14,24 +14,26 @@ export default function Hero(){
             
             <nav>
                 <ul>
-                    <li><Image className=" h-[100px] w-[980px] md:w-38 md:h-30 "
+                    <li><Image className=" h-auto  w-[80px] md:w-[130px] "
                         src={logo}
                         alt="logo" 
                         />
+                        
                     </li>
                 </ul>
             </nav>
-        
-               
+           
+            
             <nav>
                 <ul>
-                    <li><Image className="  h-[100px] w-[1120px] md:w-70 md:h-40"
+                    <li><Image className="  h-auto w-[120px] md:w-[160px] "
                         src={nome}
                         alt="nome" 
                         />
                     </li>
                 </ul>
             </nav>
+            
            
         
         

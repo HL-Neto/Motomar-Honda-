@@ -1,36 +1,118 @@
-.menu{
-    
-    background-color: hsl(0, 0%, 100% / 0.8);
-    backdrop-filter: blur(12px);
-    
-    position: fixed;
-    
-    height: 70px; 
-    padding: 3%;
-  
-    display: flex;
-    justify-content:flex-start;
-    align-items: center;
-  
-    z-index: 100;
-
-    font-family: "Quicksand", sans-serif;
-    font-weight: 200;
-    font-size: 1rem; /* menor e elegante */
-    letter-spacing: 0.2px;
+.menu {
 }
+
 .nav {
    
 }
 
 
 @media (min-width: 768px) {
+    
+    .menu{
+    
+        background-color: hsl(0, 0%, 100% / 0.8);
+        /*background-color: aqua;*/
+        
+        backdrop-filter: blur(12px);
+        
+        position: fixed;
+        
+        height: 50px; 
+        padding: 3%;
+      
+        display: flex;
+       
+        align-items: center;
+      
+        z-index: 100;
+    
+        font-family: "Quicksand", sans-serif;
+        font-weight: 500;
+        font-size: 1rem; 
+        letter-spacing: 0.2px;
+    }
+    
+    
     .nav {
         display: flex;
         gap: 20px;
+        
     }
 
-    .nav :hover{
-        color: rgb(236, 0, 0);
+    .nav a:hover,
+    .nav .dropdownTrigger:hover {
+        color: rgb(234, 23, 23);
+    }
+
+    /* dropdown Serviços Honda */
+    .dropdown {
+        position: relative;
+    }
+
+    .dropdownTrigger {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        background: none;
+        border: none;
+        font: inherit;
+        color: inherit;
+        cursor: pointer;
+        padding: 0;
+        transition: color 0.2s ease;
+    }
+
+    .arrow {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.25s ease;
+    }
+
+    .dropdown:hover .arrow {
+        transform: rotate(180deg);
+    }
+
+    .dropdownMenu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        margin: 6px 0 0 0;
+        padding: 0.5rem 0;
+        min-width: 200px;
+        list-style: none;
+        background: hsl(0, 0%, 100%);
+        border-radius: 8px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-6px);
+        transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .dropdown:hover .dropdownMenu {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    .dropdownMenu li {
+        margin: 0;
+    }
+
+    .dropdownMenu a {
+        display: block;
+        padding: 0.5rem 1rem;
+        color: inherit;
+        text-decoration: none;
+        transition: background 0.15s ease, color 0.15s ease;
+    }
+
+    .dropdownMenu a:hover {
+        background: rgba(49, 49, 49, 0.08);
+        color: rgb(234, 23, 23);
     }
 }

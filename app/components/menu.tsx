@@ -1,7 +1,7 @@
 import Image from "next/image"
 import styles from "@/app/styles/menu.module.css"
 
-import logo from "@/app/assets/logohero_motomar.png"
+
 import honda from "@/app/assets/honda_logo.png"
 import { FaWhatsapp,FaInstagram } from "react-icons/fa"
 
@@ -15,17 +15,9 @@ export default function Hero(){
             
            
          
-            <nav>
-                <ul>
-                    <li><Image className="  w-[190px] md:w-[250px] h-[190px]"
-                        src={logo}
-                        alt="logo" 
-                        />
-                    </li>
-                </ul>
-            </nav>
+        
            
-            <div className={styles.navWrapper}>
+            <div >
                 <nav >
                     <ul className={styles.nav}>
                         <li >
@@ -36,21 +28,11 @@ export default function Hero(){
                         
                         <li>
                             <a 
-                                href="#veiculos">Veiculos
+                                href="#modelos">modelos
                             </a>
                         </li>
                         
-                        <li>
-                            <a 
-                                href="#financiamento">Financiamento
-                            </a>
-                        </li>
-                        
-                        <li>
-                            <a 
-                                href="#consorcio">Consórcio
-                            </a>
-                        </li>
+                      
                         
                         <li>
                             <a 
@@ -89,13 +71,7 @@ export default function Hero(){
                         
                      </ul>
                 </nav>
-                <a href="https://api.whatsapp.com/send?phone=558330484400&text=Ol%C3%A1
-                !%20Tenho%20interesse%20neste%20produto.%20%23chave%3A%20a324M000000e0qfQAA" target="_blank" rel="noopener noreferrer" className={styles.icon_whats}>
-                    <FaWhatsapp className="size-0 md:size-6"/>
-                </a>
-                <a href="https://www.instagram.com/motomar.honda/" target="_blank" rel="noopener noreferrer" className={styles.icon_insta}>
-                    <FaInstagram className="size-0 md:size-6"/>
-                </a>
+               
             </div>
            
            

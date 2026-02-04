@@ -12,9 +12,8 @@
 
     .menu{
     
-        /* background-color: hsl(0, 0%, 100% / 0.8); */
-        background-color: aqua;
         
+        background-color: rgb(254, 254, 254);
         backdrop-filter: blur(12px);
         
         position: fixed;
@@ -33,12 +32,22 @@
         font-weight: 500;
         font-size: 1rem; 
         letter-spacing: 0.2px;
+
+        border-radius: 0 0 06px 10px;
+        justify-content: space-evenly;
     }
     
+    .banner {
+        height: 70px;
+        width: auto;
+        object-fit: contain;
+        padding-right: 10px;
+    }
     
     .nav {
         display: flex;
         gap: 20px;
+        
         
     }
 

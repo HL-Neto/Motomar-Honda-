@@ -1,9 +1,8 @@
 import Image from "next/image"
 import styles from "@/app/styles/menu.module.css"
 
+import banner50anos from "@/app/assets/WhatsApp Image 2026-02-03 at 11.12.27.jpeg"
 
-import honda from "@/app/assets/honda_logo.png"
-import { FaWhatsapp,FaInstagram } from "react-icons/fa"
 
 
 
@@ -14,7 +13,12 @@ export default function Hero(){
         <div className={styles.menu}>
             
            
-         
+            <Image
+                src={banner50anos}
+                alt="Motomar 50 anos Honda"
+                className={styles.banner}
+                priority
+            />
         
            
             <div >

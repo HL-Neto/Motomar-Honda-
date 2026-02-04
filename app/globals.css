@@ -2,6 +2,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap");
 @import "tailwindcss";
 
+@font-face {
+  font-family: "Averta Demo PE C";
+  src: url("https://db.onlinewebfonts.com/t/4b39f8ecfb8b474e78eb7a9936bce68c.woff2") format("woff2"),
+       url("https://db.onlinewebfonts.com/t/4b39f8ecfb8b474e78eb7a9936bce68c.woff") format("woff");
+  font-weight: 400 800;
+  font-style: normal;
+  font-display: swap;
+}
+
 
 
 *

@@ -14,7 +14,6 @@
     
         
         background-color: rgb(254, 254, 254);
-        backdrop-filter: blur(12px);
         
         position: fixed;
         
@@ -95,7 +94,7 @@
         list-style: none;
         background: hsl(0, 0%, 100%);
         border-radius: 8px;
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+       
         opacity: 0;
         visibility: hidden;
         transform: translateY(-6px);
@@ -120,11 +119,8 @@
         padding: 0.5rem 1rem;
         color: inherit;
         text-decoration: none;
-        transition: background 0.15s ease, color 0.15s ease;
+        
     }
 
-    .dropdownMenu a:hover {
-        background: rgba(49, 49, 49, 0.08);
-        color: rgb(234, 23, 23);
-    }
+ 
 }

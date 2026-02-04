@@ -1,12 +1,12 @@
 .hero {
-  
+
   
   position: relative;
-    padding: 20%;
+    padding: 25%;
   
     background-image: url("@/app/assets/Hero/HONDA_CRF300_F_2026 (33).jpeg");
     background-size: cover;
-    background-position: center;
+    background-position:bottom;
     background-repeat: no-repeat;
   
     display: flex;

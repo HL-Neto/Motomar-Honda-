@@ -35,15 +35,15 @@ export default function About() {
         <h1 className="text-sm uppercase tracking-widest text-gray-500 pb-3">
           Sobre Nós
         </h1>
-
+        <br/>
         <h2 className="leading-tight">
-          <span className="block text-5xl md:text-6xl font-extrabold text-red-600 tracking-wide">
+          <span className="block text-5xl md:text-5xl font-extrabold text-red-600 tracking-wide">
             Motomar Honda
           </span>
         </h2>
 
         <div className="space-y-5 text-gray-600 leading-relaxed mt-6 text-base">
-
+        <br/>
           <p>
             Na Motomar Honda, tecnologia, atendimento e paixão por motos
             se encontram para oferecer uma experiência completa,

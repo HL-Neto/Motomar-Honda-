@@ -9,7 +9,7 @@
   
   .consorcio,
   .financiamento,
-  .duplachance {
+  .oficina {
     position: relative;
     overflow: hidden;
   
@@ -39,7 +39,7 @@
     background-image: url("/assets/services/teste3.jpg");
   }
   
-  .duplachance {
+  .oficina {
     background-image: url("/assets/oficina/teste4.jpg");
   }
   
@@ -47,7 +47,7 @@
   
   .consorcio::after,
   .financiamento::after,
-  .duplachance::after {
+  .oficina::after {
     content: "";
   
     position: absolute;

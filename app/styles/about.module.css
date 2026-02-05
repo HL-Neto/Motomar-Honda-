@@ -3,7 +3,7 @@
     flex-direction: center;
     gap: 2.5rem;
   
-    padding: 4rem 1.5rem;
+    padding: 5rem 1.5rem;
     background: #fafafa;
   
     overflow: hidden; /* evita espaço da animação */
@@ -37,13 +37,13 @@
     .about {
         display: flex;
         flex-direction: center;
-        gap: 4rem;
+        gap: 5rem;
       
-        padding: 4rem 1.5rem;
+        padding: 4rem 4rem;
         background: #fafafa;
       
         overflow: hidden; /* evita espaço da animação */
-        font-family: "Quicksand", sans-serif; /* fonte dos banners */
+        font-family:"Averta Demo PE C";
       }
     
   

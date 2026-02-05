@@ -35,6 +35,25 @@ export default function Hero(){
                                 href="#modelos">modelos
                             </a>
                         </li>
+
+                        <li>
+                            <a 
+                                href="#financiamento"> financiamento
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a 
+                                href="#consorcio">consórcio
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a 
+                                href="#oficina">oficina
+                            </a>
+                        </li>
+                        
                         
                       
 

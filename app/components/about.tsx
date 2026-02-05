@@ -37,7 +37,7 @@ export default function About() {
         </h1>
         <br/>
         <h2 className="leading-tight">
-          <span className="block text-5xl md:text-5xl font-extrabold text-red-600 tracking-wide">
+          <span className="block text-5xl md:text-4xl font-extrabold text-red-600 tracking-wide">
             Motomar Honda
           </span>
         </h2>

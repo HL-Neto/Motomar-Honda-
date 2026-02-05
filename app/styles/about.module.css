@@ -7,8 +7,7 @@
     background: #fafafa;
   
     overflow: hidden; /* evita espaço da animação */
-    font-family: "Quicksand", sans-serif; /* fonte dos banners */
-  }
+}
   /* TEXTO */
   .textContent {
     display: flex;
@@ -39,7 +38,7 @@
         flex-direction: center;
         gap: 5rem;
       
-        padding: 4rem 4rem;
+        padding: 4rem 1rem;
         background: #fafafa;
       
         overflow: hidden; /* evita espaço da animação */
@@ -49,11 +48,11 @@
   
     .imageWrapper {
       justify-content: flex-start;
-      padding-left: 8%;
+      padding-left: 6.5%;
     }
   
     .imageWrapper img {
-      min-width: 480px;
+     width: 100%;
     }
   
     .textContent {

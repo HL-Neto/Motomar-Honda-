@@ -37,18 +37,6 @@ export default function Hero(){
                         </li>
                         
                       
-                        
-                        <li>
-                            <a 
-                                href="#oficina">Oficina
-                            </a>
-                        </li>
-
-                        <li>
-                            <a 
-                                href="#duplachance">Dupla Chance
-                            </a>
-                        </li>
 
 
                         <li className={styles.dropdown}>

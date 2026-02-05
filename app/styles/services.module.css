@@ -1,159 +1,130 @@
-.services{
-    
+.services {
     padding: 3%;
-    
     display: flex;
     flex-direction: column;
-    gap:  20px;
-   
-    
-}
-
-  
-    
-
-.consorcio{
-
-    position: relative;   
-    overflow: hidden;   
-
-    background-image: 
-    url("@/app/assets/services/IFR_MOTHON0185PRG002_Honda_Concess_2025_Dia01_3255_RGB (2).jpg");
-    background-size: cover;   
-    background-position:right;
-    background-repeat: no-repeat;
-    
-    font-family: "Quicksand", sans-serif;
-    font-weight: 500;
-    font-size: 1rem; 
-    letter-spacing: 0.2px;
-    
-    width: 100%;
-    height: 500px;
-
-    color: white;
-    border-radius: 8px;
-    
-    
-}
-
-.consorcio::after{
-    content: "";
-
-    position: absolute;
-    top: 0;
-    right: 0;
-
-    width: 40%;
-    height: 100%;
-
-    background: linear-gradient(
-        to left,
-        rgba(0,0,0,0.8),
-        rgba(0,0,0,0)
-    );
-
-    z-index: 1;
-
-
-    
-}
-
-.letter{
-    
-    padding: 5%;
-    display: flex;        
-    flex-direction: column;
-
     gap: 20px;
-    /* background-color: aqua; */
-}   
-
-.financiamento{
-   
-    
-    position: relative;   
-    overflow: hidden;   
-
-
-    background-image: url("@/app/assets/services/IFR_MOTHON0185PRG001_Honda_Concess_2025_2675_RGB (2).jpg");
-    background-size: cover;   
-    background-position:center;
+  }
+  
+  /* ================= CARDS ================= */
+  
+  .consorcio,
+  .financiamento,
+  .duplachance {
+    position: relative;
+    overflow: hidden;
+  
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
-    
+  
     font-family: "Quicksand", sans-serif;
     font-weight: 500;
-    font-size: 1rem; 
+    font-size: 1rem;
     letter-spacing: 0.2px;
-    
+  
     width: 100%;
     height: 500px;
-
+  
     color: white;
-    
     border-radius: 8px;
-}
-
-.financiamento::after{
+  }
+  
+  /* Backgrounds */
+  
+  .consorcio {
+    background-image: url("/assets/services/teste2.jpg");
+  }
+  
+  .financiamento {
+    background-image: url("/assets/services/teste3.jpg");
+  }
+  
+  .duplachance {
+    background-image: url("/assets/oficina/teste4.jpg");
+  }
+  
+  /* ================= SOMBRA ================= */
+  
+  .consorcio::after,
+  .financiamento::after,
+  .duplachance::after {
     content: "";
-
+  
     position: absolute;
     top: 0;
-    right: 0;
-
+    left: 0;
+  
     width: 40%;
     height: 100%;
-
+  
     background: linear-gradient(
-        to left,
-        rgba(0,0,0,0.8),
-        rgba(0,0,0,0)
+      to right,
+      rgba(0, 0, 0, 1),
+      rgba(0, 0, 0, 0)
     );
-
+  
     z-index: 1;
-}
-
-
-.duplachance{
-   
-    position: relative;   
-    overflow: hidden;   
-
-
-    background-image: url("@/app/assets/oficina/IFR_MOTHON0185PRG002_Honda_Concess_2025_Dia01_4220_RGB.jpg");
-    background-size: cover;   
-    background-position:right;
-    background-repeat: no-repeat;
-    
-
-    font-family: "Quicksand", sans-serif;
-    font-weight: 500;
-    font-size: 1rem; 
-    letter-spacing: 0.2px;
-    
-    width: 100%;
-    height: 500px;
-
+  }
+  
+  /* ================= TEXTO ================= */
+  
+  .letter {
+    position: relative;
+    z-index: 2;
+  
+    padding: 5%;
+  
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  /* ================= BOTÕES ================= */
+  
+  .buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+  }
+  
+  /* Transparente */
+  
+  .btnOutline {
+    padding: 10px 22px;
+  
+    background: transparent;
+    border: 2px solid white;
     color: white;
-
-    border-radius: 8px;
-}
-
-.duplachance::after{
-    content: "";
-
-    position: absolute;
-    top: 0;
-    right: 0;
-
-    width: 40%;
-    height: 100%;
-
-    background: linear-gradient(
-        to left,
-        rgba(0,0,0,0.8),
-        rgba(0,0,0,0)
-    );
-
-    z-index: 1;
-}
+  
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+  
+    transition: all 0.3s ease;
+  }
+  
+  .btnOutline:hover {
+    background: white;
+    color: black;
+  }
+  
+  /* Vermelho */
+  
+  .btnPrimary {
+    padding: 10px 22px;
+  
+    background: #e30613;
+    border: none;
+    color: white;
+  
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+  
+    transition: all 0.3s ease;
+  }
+  
+  .btnPrimary:hover {
+    background: #b8000f;
+  }
+  

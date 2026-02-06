@@ -14,8 +14,8 @@ const slides = [hornet, miloitocentos, xre, cbr];
 
 export default function Modelos() {
   const [emblaRef, emblaApi] = useEmblaCarousel({
-    loop: false,        // SEM loop
-    align: "center",    // Centraliza
+    loop: false,
+    align: "center",
   });
 
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -27,19 +27,22 @@ export default function Modelos() {
 
   useEffect(() => {
     if (!emblaApi) return;
-  
+
     onSelect();
     emblaApi.on("select", onSelect);
-  
+
     return () => {
-      if (emblaApi) {
-        emblaApi.off("select", onSelect);
-      }
+      emblaApi.off("select", onSelect);
     };
   }, [emblaApi, onSelect]);
 
   return (
     <div className={styles.carousel} id="modelos">
+
+      {/* TÍTULO */}
+      <div className={styles.titleBox}>
+        <h1 className={styles.title}>Veja nossas motos</h1>
+      </div>
 
       {/* SETA ESQUERDA */}
       <button
@@ -57,23 +60,42 @@ export default function Modelos() {
         ❯
       </button>
 
+      {/* CARROSSEL */}
       <div className={styles.viewport} ref={emblaRef}>
         <div className={styles.container}>
-          {slides.map((src, index) => (
-            <div
-              key={index}
-              className={`${styles.slide} ${
-                index === selectedIndex ? styles.active : ""
-              }`}
-            >
-              <Image
-                src={src}
-                alt={`Slide ${index + 1}`}
-                fill
-                className={styles.image}
-              />
-            </div>
-          ))}
+
+          {slides.map((src, index) => {
+            const isLast = index === slides.length - 1;
+
+            return (
+              <div
+                key={index}
+                className={`${styles.slide} ${
+                  index === selectedIndex ? styles.active : ""
+                }`}
+              >
+                <Image
+                  src={src}
+                  alt={`Slide ${index + 1}`}
+                  fill
+                  className={styles.image}
+                />
+
+                {/* BOTÃO + NO ÚLTIMO SLIDE */}
+                {isLast && (
+                  <a
+                    href="https://motomar.com.br/zero-km"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.plusLink}
+                  >
+                    <div className={styles.plusIcon}>+</div>
+                  </a>
+                )}
+              </div>
+            );
+          })}
+
         </div>
       </div>
 
@@ -89,6 +111,7 @@ export default function Modelos() {
           />
         ))}
       </div>
+
     </div>
   );
 }

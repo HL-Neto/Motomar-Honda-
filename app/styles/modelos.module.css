@@ -2,11 +2,29 @@
   width: 100%;
   max-width: 100%;
   margin: 0 auto;
-  padding: 70px ;
+  height: 100vh ;
+  display: flex;
+  justify-content: center;
 
+  flex-direction: column;
   position: relative;
 }
+.titleBox {
+  text-align: center;
+  margin-bottom: 40px;
+}
 
+.title {
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  font-family:"Averta Demo PE C";
+  background: linear-gradient(90deg, #dc2626, #ef4444);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-transform: uppercase;
+}
 /* Janela */
 .viewport {
   overflow: hidden;
@@ -114,4 +132,49 @@
 .dotActive {
   background: #dc2626;
   transform: scale(1.3);
+}
+
+.plusLink {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(2px);
+
+  text-decoration: none;
+  border-radius: 18px;
+
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.slide:hover .plusLink {
+  opacity: 1;
+}
+
+.plusIcon {
+  width: 70px;
+  height: 70px;
+
+  border-radius: 50%;
+  border: 3px solid white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 40px;
+  font-weight: bold;
+  color: white;
+
+  transition: 0.3s;
+}
+
+.plusLink:hover .plusIcon {
+  transform: scale(1.1);
+  background: rgba(255, 255, 255, 0.2);
 }

@@ -1,34 +1,102 @@
 .hero {
-
-  
   position: relative;
-    padding: 24%;
-  
-    background-image: url("@/app/assets/Hero/HONDA_CRF300_F_2026 (33).jpeg");
-    background-size: cover;
-    background-position:bottom;
-    background-repeat: no-repeat;
-  
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  
-    overflow: hidden; /* importante */
-  }
-  
-  /* Camada escura nas bordas */
-  .hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-  
-    background: radial-gradient(
-      
-      rgba(0,0,0,0) 20%,
-      rgba(0,0,0,0.8) 80%
-    );
-  
-    pointer-events: none;
-  }
-  
+  width: 100%;
+  height: 700px;
+
+  overflow: hidden;
+}
+
+/* CAROUSEL */
+
+.carousel {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+  z-index: 2;
+}
+
+.image {
+  object-fit: cover;
+}
+
+/* DOTS */
+
+.dots {
+  position: absolute;
+
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: flex;
+  gap: 10px;
+
+  z-index: 10;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+
+  border-radius: 50%;
+  border: none;
+
+  background: rgba(255, 255, 255, 0.5);
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.dot:hover {
+  background: white;
+}
+
+.activeDot {
+  background: #d32525;
+}
+
+/* WHATSAPP */
+
+.whatsappFloat {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+
+  width: 60px;
+  height: 60px;
+
+  background-color: #25d366;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+
+  z-index: 9999;
+
+  transition: transform 0.2s ease;
+}
+
+.whatsappFloat:hover {
+  transform: scale(1.1);
+}
+
+.whatsappFloat img {
+  width: 35px;
+  height: 35px;
+}

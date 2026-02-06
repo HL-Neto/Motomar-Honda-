@@ -39,7 +39,7 @@ export default function Modelos() {
   }, [emblaApi, onSelect]);
 
   return (
-    <div className={styles.carousel}>
+    <div className={styles.carousel} id="modelos">
 
       {/* SETA ESQUERDA */}
       <button

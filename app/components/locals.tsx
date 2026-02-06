@@ -24,14 +24,16 @@ export default function Locals() {
 
   return (
     <div className={styles.container}>
-
+      
      <div className={styles.letter}>
+      
         <div className="text-5xl lock text-5xl md:text-5xl font-extrabold text-red-600 tracking-wide">
             Conheça nossas unidades Motomar
-            
-        </div>
+           
+        </div><br/>
+        <div className=" h-1 bg-black/25 rounded-lg  " />
      </div> 
-      {/* MAPA */}
+      
       <div className={styles.mapBox}>
         <iframe
           src={mapUrl}

@@ -6,16 +6,18 @@ import { useEffect, useState, useCallback } from "react";
 import Image from "next/image";
 
 import hornet from "@/public/assets/modelos/banner-sitehornet.jpeg";
+import miloitocentos from "@/public/assets/modelos/banner-site-1800.jpeg";
+import xre from "@/public/assets/modelos/banner-site-XRE.jpeg";
+import cbr from "@/public/assets/modelos/banner-site-CBR.jpeg";
 
-const slides = [
-  hornet,
-  "/assets/modelos/banner-site-1800.jpg",
-  "/assets/modelos/banner-site-XRE.jpg",
-  "/assets/modelos/banner-site-CBR.jpg",
-];
+const slides = [hornet, miloitocentos, xre, cbr];
 
 export default function Modelos() {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
+  const [emblaRef, emblaApi] = useEmblaCarousel({
+    loop: false,        // SEM loop
+    align: "center",    // Centraliza
+  });
+
   const [selectedIndex, setSelectedIndex] = useState(0);
 
   const onSelect = useCallback(() => {
@@ -28,24 +30,42 @@ export default function Modelos() {
 
     onSelect();
     emblaApi.on("select", onSelect);
+
+    return () => emblaApi.off("select", onSelect);
   }, [emblaApi, onSelect]);
 
   return (
     <div className={styles.carousel}>
+
+      {/* SETA ESQUERDA */}
+      <button
+        className={styles.arrowLeft}
+        onClick={() => emblaApi?.scrollPrev()}
+      >
+        ❮
+      </button>
+
+      {/* SETA DIREITA */}
+      <button
+        className={styles.arrowRight}
+        onClick={() => emblaApi?.scrollNext()}
+      >
+        ❯
+      </button>
+
       <div className={styles.viewport} ref={emblaRef}>
         <div className={styles.container}>
           {slides.map((src, index) => (
             <div
+              key={index}
               className={`${styles.slide} ${
                 index === selectedIndex ? styles.active : ""
               }`}
-              key={index}
             >
               <Image
                 src={src}
-                alt={`Banner ${index + 1}`}
+                alt={`Slide ${index + 1}`}
                 fill
-                priority={index === 0}
                 className={styles.image}
               />
             </div>
@@ -53,14 +73,15 @@ export default function Modelos() {
         </div>
       </div>
 
+      {/* DOTS */}
       <div className={styles.dots}>
         {slides.map((_, index) => (
           <button
             key={index}
+            onClick={() => emblaApi?.scrollTo(index)}
             className={`${styles.dot} ${
               index === selectedIndex ? styles.dotActive : ""
             }`}
-            onClick={() => emblaApi?.scrollTo(index)}
           />
         ))}
       </div>

@@ -4,12 +4,13 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import styles from "@/app/styles/hero.module.css";
 
-import img1 from "@/public/assets/Hero/BANNER_DESKTOP_1920x700_INST-KV-INVERTIDO.jpeg";
-import img2 from "@/public/assets/Hero/CRF300F_COVER_YOUTUBE_v2-2.png";
+import img1 from "@/public/assets/Hero/CRF300F_COVER_YOUTUBE_v2-2.png";
+import img2 from "@/public/assets/Hero/BANNER_DESKTOP_1920x700_INST-KV-INVERTIDO.jpeg";
 import img3 from "@/public/assets/Hero/Banner Desktop.jpeg";
-import img4 from "@/public/assets/Hero/CRF300F_COVER_YOUTUBE_v2-2.png";
+import img4 from "@/public/assets/Hero/HORNET750_banner site_1920x700_02.jpeg";
+import img5 from "@/public/assets/Hero/COVER_FB.jpeg"
 
-const images = [img1, img2, img3, img4];
+const images = [img1, img2, img3, img4,img5];
 
 export default function Hero() {
   const [current, setCurrent] = useState(0);
@@ -18,7 +19,7 @@ export default function Hero() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % images.length);
-    }, 4000); // 4s
+    }, 6000); 
 
     return () => clearInterval(interval);
   }, []);

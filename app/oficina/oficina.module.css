@@ -1,0 +1,141 @@
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 4%;
+    background: #fafafa;
+  }
+  
+  /* ================= CARD BASE ================= */
+  
+  .card {
+    position: relative;
+    overflow: hidden;
+  
+
+  
+    font-family: "Quicksand", sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+  
+    color: white;
+    border-radius: 8px;
+  
+    display: flex;
+    align-items: flex-end;
+  }
+  
+  /* ================= HERO (AMARELO) ================= */
+  
+  .hero {
+    height: 30vh;
+    width: 100%;
+    background-image: url("/assets/oficina/");
+  }
+  
+  /* ================= BOTTOM ================= */
+  
+  .bottom {
+    display: flex;
+    gap: 20px;
+    flex: 1;
+  }
+  
+  /* Verde */
+  .div1 {
+    flex: 1;
+    background-image: url("/assets/oficina/capacetes.webp");
+    background-size:contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  /* Azul */
+  .div2 {
+    flex: 1;
+    background-image: url("/assets/oficina/produtos.jpeg");
+    background-size:cover;
+    
+    background-repeat: no-repeat;
+  }
+  
+  /* ================= OVERLAY ================= */
+  
+  .card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.85),
+      rgba(0, 0, 0, 0)
+    );
+    z-index: 1;
+  }
+  
+  /* ================= TEXTO ================= */
+  
+  .letter {
+    position: relative;
+    z-index: 2;
+    padding: 5%;
+  
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  
+    font-family: "Averta Demo PE C";
+  }
+  
+  /* ================= BOTÕES ================= */
+  
+  .buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+  }
+  
+  .btnOutline {
+    padding: 10px 22px;
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .btnOutline:hover {
+    background: white;
+    color: black;
+  }
+  
+  .btnPrimary {
+    padding: 10px 22px;
+    background: #e30613;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .btnPrimary:hover {
+    background: #b8000f;
+  }
+  
+  /* ================= MOBILE ================= */
+  
+  @media (max-width: 768px) {
+    .bottom {
+      flex-direction: column;
+    }
+  
+    .hero {
+      height: 40vh;
+    }
+  }
+  

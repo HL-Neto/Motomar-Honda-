@@ -5,6 +5,7 @@ import Services from "@/app/components/services";
 import Footer from "@/app/components/footer";
 import Modelos from "@/app/components/modelos"
 import Locals from "@/app/components/locals";
+import Seguro from "@/app/components/seguro"
 
 
 export default function Home() {
@@ -16,6 +17,7 @@ export default function Home() {
       <About/>
       <Modelos/>
       <Services/>
+      <Seguro/>
       <Locals/>
       <Footer/>
       

@@ -130,7 +130,7 @@ export default function Services() {
             </a>
 
             <a
-              href="https://motomar.com.br/oficina"
+              href="/oficina"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.btnPrimary}

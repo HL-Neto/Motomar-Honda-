@@ -63,39 +63,31 @@ export default function Modelos() {
       {/* CARROSSEL */}
       <div className={styles.viewport} ref={emblaRef}>
         <div className={styles.container}>
+          {slides.map((src, index) => (
+            <div
+              key={index}
+              className={`${styles.slide} ${
+                index === selectedIndex ? styles.active : ""
+              }`}
+            >
+              <Image
+                src={src}
+                alt={`Slide ${index + 1}`}
+                fill
+                className={styles.image}
+              />
 
-          {slides.map((src, index) => {
-            const isLast = index === slides.length - 1;
-
-            return (
-              <div
-                key={index}
-                className={`${styles.slide} ${
-                  index === selectedIndex ? styles.active : ""
-                }`}
+              {/* BOTÃO + EM TODOS OS SLIDES */}
+              <a
+                href="https://motomar.com.br/zero-km"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.plusLink}
               >
-                <Image
-                  src={src}
-                  alt={`Slide ${index + 1}`}
-                  fill
-                  className={styles.image}
-                />
-
-                {/* BOTÃO + NO ÚLTIMO SLIDE */}
-                {isLast && (
-                  <a
-                    href="https://motomar.com.br/zero-km"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={styles.plusLink}
-                  >
-                    <div className={styles.plusIcon}>+</div>
-                  </a>
-                )}
-              </div>
-            );
-          })}
-
+                <div className={styles.plusIcon}>+</div>
+              </a>
+            </div>
+          ))}
         </div>
       </div>
 
@@ -111,7 +103,6 @@ export default function Modelos() {
           />
         ))}
       </div>
-
     </div>
   );
 }

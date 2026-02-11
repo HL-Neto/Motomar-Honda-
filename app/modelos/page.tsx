@@ -18,8 +18,7 @@ const slides = [
 
 export default function Modelos() {
   const [emblaRef, emblaApi] = useEmblaCarousel({
-    loop: true,
-    align: "center",
+    align: "center", // loop removido
   });
 
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -44,9 +43,14 @@ export default function Modelos() {
     <div>
       <Menu />
 
-      {/* BANNER (SEM TEXTO) */}
-      <section className={styles.banner}/>
-        
+      {/* BANNER */}
+      <section className={styles.banner} />
+
+      {/* TÍTULO */}
+      <section className={styles.titleSection}>
+        <h1 className={styles.category}>Adventure</h1>
+        <h2 className={styles.model}>Trail</h2>
+      </section>
 
       {/* CARROSSEL */}
       <section className={styles.carousel}>
@@ -75,7 +79,7 @@ export default function Modelos() {
               >
                 <Image
                   src={src}
-                  alt={`Tornado ${index + 1}`}
+                  alt={`Trail ${index + 1}`}
                   fill
                   className={styles.image}
                   priority={index === selectedIndex}
